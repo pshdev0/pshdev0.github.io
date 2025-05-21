@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <!-- Tell browsers to be responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Load MathJax from CDN -->
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+
+    <!-- Optional: add your own CSS here -->
+  </head>
+  <body>
+    <header>
+      <h1><a href="{{ "/" | relative_url }}">{{ site.title }}</a></h1>
+    </header>
+
+    <main>
+      {{ content }}
+    </main>
+  </body>
+</html>
