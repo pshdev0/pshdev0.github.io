@@ -20,7 +20,7 @@ Just as with a real function $g$ of a real variable $x$, denoted $g(x)$, we may 
 
 $$I=\oint_\gamma f(z)dz,$$
 
-where $\gamma=\{z:|z|=1\}$. The closed contour $\gamma$ may be parametrized by $\gamma=\{z=e^{i\theta}:0\leq\theta\leq 2\pi\}$, hence
+where $\gamma = \{ z:|z|=1 \}$. The closed contour $\gamma$ may be parametrized by $\gamma = \{ z=e^{i\theta}:0\leq\theta\leq 2\pi \}$, hence
 
 $$I=\int_0^{2\pi}f(e^{i\theta})ie^{i\theta}d\theta,$$
 
