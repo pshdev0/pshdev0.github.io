@@ -3,17 +3,25 @@
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
-    <!-- Tell browsers to be responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Configure MathJax to allow $...$ and $$...$$ -->
+    <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      }
+    };
+    </script>
 
     <!-- Load MathJax from CDN -->
     <script
       type="text/javascript"
       id="MathJax-script"
+      async
       src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
-
-    <!-- Optional: add your own CSS here -->
   </head>
   <body>
     <header>
