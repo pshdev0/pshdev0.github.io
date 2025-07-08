@@ -1,5 +1,7 @@
 # Analytic Number Theory
 
+WIP - currently tidying these notes up
+
 [1. Introduction](1-introduction.md)  
 [2. Infinitude of the Primes](2-infinitude-of-the-primes.md)  
 [3. The Riemann Zeta Function](3-the-riemann-zeta-function.md)  
