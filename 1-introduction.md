@@ -8,7 +8,7 @@ TODO
 The set of complex numbers, denoted $\mathbb{C}$, are a generalisation of the real numbers $\mathbb{R}$. We define a complex number $z$ by $z=x+iy$ where $x,y$ are real numbers, e.g. $1$,$-4$,$\pi$,$-3/4$, etc. The symbol $i$ may be treated algebraically like any other symbol with the additional property that $i^2=-1$, i.e. $i=\sqrt{-1}$. We can represent a complex number as the ordered pair $z=(x,y)$ and so imagine it in the "complex plane" as a point. Some notation and facts regarding complex numbers are now given:
 
 - $z^*\equiv\bar{z}\equiv x-iy$
-- $|z|\equiv\sqrt{zz^*}=\sqrt{(x+iy)(x-iy)}=\sqrt{x^2-xiy+iyx-i^2y^2}=\sqrt{x^2+y^2}$ is the length of the complex number.
+- $|z|\equiv\sqrt{zz^*}=\sqrt{(x+iy)(x-iy)}=\sqrt{x^2-xiy+iyx-i^2y^2}=\sqrt{x^2+y^2}\text{ is the length of the complex number.}$
 - $e^{iz}=\cos z+i\sin z$
 - $\Re(z)=x$
 - $\Im(z)=y$
