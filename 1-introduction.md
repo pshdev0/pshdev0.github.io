@@ -13,14 +13,14 @@ The set of complex numbers, denoted $\mathbb{C}$, are a generalisation of the re
 - $\Re(z)=x$
 - $\Im(z)=y$
 - $\text{Arg~}z=\tan_2^{-1}(y/x)$, where $\tan_2$ takes into account the quadrant $z$ belongs to.
-- $\log z=\log|z|+i(\text{Arg~}(z)+2\pi k)$, where $k\in\mathbb{Z}$.
+- $\log z=\log\|z\|+i(\text{Arg~}(z)+2\pi k)$, where $k\in\mathbb{Z}$.
 
 ### Real \& Complex Calculus
-Just as with a real function $g$ of a real variable $x$, denoted $g(x)$, we may consider a complex function $f$ of a complex variable $z$, denoted $f(z)$. We may also integrate such functions. Integrating a real function is simple in the sense we can only integrate over intervals of the real line, but complex numbers exist in a two-dimensional plane, so the path of integration can be a two-dimensional curve. We will want to integrate a complex function around a simple closed contour $\gamma$ ("simple" because it does not intersect itself). An example will demonstrate. Suppose we wish to integrate the function $f(z)$ around the contour $|z|=1$. We write this as
+Just as with a real function $g$ of a real variable $x$, denoted $g(x)$, we may consider a complex function $f$ of a complex variable $z$, denoted $f(z)$. We may also integrate such functions. Integrating a real function is simple in the sense we can only integrate over intervals of the real line, but complex numbers exist in a two-dimensional plane, so the path of integration can be a two-dimensional curve. We will want to integrate a complex function around a simple closed contour $\gamma$ ("simple" because it does not intersect itself). An example will demonstrate. Suppose we wish to integrate the function $f(z)$ around the contour $\|z\|=1$. We write this as
 
 $$I=\oint_\gamma f(z)dz,$$
 
-where $\gamma = \{ z:|z|=1 \}$. The closed contour $\gamma$ may be parametrized by $\gamma = \{ z=e^{i\theta}:0\leq\theta\leq 2\pi \}$, hence
+where $\gamma = \{ z:\|z\|=1 \}$. The closed contour $\gamma$ may be parametrized by $\gamma = \{ z=e^{i\theta}:0\leq\theta\leq 2\pi \}$, hence
 
 $$I=\int_0^{2\pi}f(e^{i\theta})ie^{i\theta}d\theta,$$
 
@@ -94,9 +94,9 @@ A complex valued function $f$ of a complex variable is called holomorphic in an 
   Let $U\subset\mathbb{C}$ be an open set. If $f_n\xrightarrow{L.U.} f$ in $U$ then $f_n\in Hol(U)$, $f\in Hol(U)$ and $f_n'\xrightarrow{L.U.}f'$.
 
 ## Asymptotic Notation
-We write $f=O(g)$ or $f\ll g$ if $|f(x)|\leq A|g(x)|$ for all $x\geq x_0$ for some $x_0$. We may write $O_\varepsilon(g)$ or $f\ll_\varepsilon g$ if the constant $C$ depends on $\varepsilon$. For example $6x\sin x=O(x)$ or $f(x)=O(1)$ implies that $|f(x)|$ is bounded.
+We write $f=O(g)$ or $f\ll g$ if $\|f(x)\|\leq A\|g(x)\|$ for all $x\geq x_0$ for some $x_0$. We may write $O_\varepsilon(g)$ or $f\ll_\varepsilon g$ if the constant $C$ depends on $\varepsilon$. For example $6x\sin x=O(x)$ or $f(x)=O(1)$ implies that $\|f(x)\|$ is bounded.
 
-By contrast we write $f=o(g)$ if for all $\varepsilon>0$ there exists an $x_0>0$ such that $|f(x)|\leq\varepsilon A|g(x)|$ for all $x\geq x_0$ for some $x_0$ which loosely speaking means that $f$ is \emph{strictly} bounded by $g$.
+By contrast we write $f=o(g)$ if for all $\varepsilon>0$ there exists an $x_0>0$ such that $\|f(x)\|\leq\varepsilon A\|g(x)\|$ for all $x\geq x_0$ for some $x_0$ which loosely speaking means that $f$ is \emph{strictly} bounded by $g$.
 
 ## The Mellin Transform
 The Mellin transform
@@ -159,7 +159,7 @@ Our first theorem may seem a little esoteric and abstract, but bear with it as i
 
 **Theorem.** (Hadamard's Factorization Theorem)
 Let $f$ be an entire function of finite order $\omega$ and $z_i$ the non-zero zeros of $f$ with multiplicity. Let 0 be a zero of $f$ with multiplicity $m$. Let the \emph{rank} of $f$, $p<\omega$, be the smallest integer $p$ such that
-$\sum_{n=1}^\infty1/|z_n|^{p+1}<\infty$. Then there exists a polynomial $g$ whose degree is at most $\omega$ such that
+$\sum_{n=1}^\infty1/\|z_n\|^{p+1}<\infty$. Then there exists a polynomial $g$ whose degree is at most $\omega$ such that
 $$f(z)=z^me^{g(z)}\prod_{n=1}^\infty E_p(z/z_n),$$
 where $E_p$ is the $p$-th Weierstrass elementary factor, $E_0=1-z$ and $E_p=\exp(z+z^2/2+\cdots+z^p/p)$.
 
@@ -167,19 +167,19 @@ where $E_p$ is the $p$-th Weierstrass elementary factor, $E_0=1-z$ and $E_p=\exp
 **Proposition.** 
 Let $\Re s\geq\delta>0$, then by Stirling-Laplace,
 
-$$\left|\frac{1}{\Gamma(s)}\right|\sim\frac{1}{\sqrt{2\pi}}\left|s^{1/2-s}e^{s}\right|=\frac{1}{\sqrt{2\pi}}\left|e^{-(s-1/2)\log s+s}\right|=\frac{1}{2\pi}\left|e^{-(\sigma-1/2)\log|s|+t\theta+\sigma}\right|.$$
+$$\left\|\frac{1}{\Gamma(s)}\right\|\sim\frac{1}{\sqrt{2\pi}}\left\|s^{1/2-s}e^{s}\right\|=\frac{1}{\sqrt{2\pi}}\left\|e^{-(s-1/2)\log s+s}\right\|=\frac{1}{2\pi}\left\|e^{-(\sigma-1/2)\log\|s\|+t\theta+\sigma}\right\|.$$
 
 We will show that
 
-$$e^{-(\sigma-1/2)\log|s|+t\theta+\sigma}<Ce^{|s|^{1+\varepsilon}}\equiv e^{c+|s|^{1+\varepsilon}},$$
+$$e^{-(\sigma-1/2)\log\|s\|+t\theta+\sigma}<Ce^{\|s\|^{1+\varepsilon}}\equiv e^{c+\|s\|^{1+\varepsilon}},$$
 
-or equivalently $\color{ForestGreen}-(\sigma-1/2)\log|s|\color{black}+\color{NavyBlue}t\theta+\sigma\color{black}<c+\color{RedOrange}|s|^{1+\varepsilon}$ for some constant $c>0$ and $x\equiv|s|$ sufficiently large. Since $x>\sigma,t$ and $|\theta|\leq\pi/2$ then wlog we may rewrite
+or equivalently $\color{ForestGreen}-(\sigma-1/2)\log\|s\|\color{black}+\color{NavyBlue}t\theta+\sigma\color{black}<c+\color{RedOrange}\|s\|^{1+\varepsilon}$ for some constant $c>0$ and $x\equiv\|s\|$ sufficiently large. Since $x>\sigma,t$ and $\|\theta\|\leq\pi/2$ then wlog we may rewrite
 
 $$\color{ForestGreen}(x+1/2)\log(x)\color{black}+\color{NavyBlue}(\pi/2+1)x\color{black}-\color{RedOrange}x^{1+\varepsilon}\color{black}=x\log(x)-x^{1+\varepsilon}+O(x)\to-\infty,$$
 
-as $x\to\infty$ since $\lim_{x\to\infty}(x\log x)/x^{1+\varepsilon}=0$. Therefore, the right hand side is bounded above and $\Gamma^{-1}(s)\ll_\varepsilon e^{|s|^{1+\varepsilon}}$. Now using Euler's reflection formula and similar reasoning,
+as $x\to\infty$ since $\lim_{x\to\infty}(x\log x)/x^{1+\varepsilon}=0$. Therefore, the right hand side is bounded above and $\Gamma^{-1}(s)\ll_\varepsilon e^{\|s\|^{1+\varepsilon}}$. Now using Euler's reflection formula and similar reasoning,
 
-$$\left|\frac{1}{\Gamma(1-s)}\right|=\color{ForestGreen}\left|\Gamma(s)\right|\color{NavyBlue}\left|\frac{\sin(\pi s)}{\pi}\right|\color{black}\ll_{\varepsilon}\color{ForestGreen}e^{|s|^{1+\varepsilon}}\color{NavyBlue}e^{\pi|s|}\color{black}\ll_{\varepsilon} e^{|s|^{\varepsilon+1}}.$$
+$$\left\|\frac{1}{\Gamma(1-s)}\right\|=\color{ForestGreen}\left\|\Gamma(s)\right\|\color{NavyBlue}\left\|\frac{\sin(\pi s)}{\pi}\right\|\color{black}\ll_{\varepsilon}\color{ForestGreen}e^{\|s\|^{1+\varepsilon}}\color{NavyBlue}e^{\pi\|s\|}\color{black}\ll_{\varepsilon} e^{\|s\|^{\varepsilon+1}}.$$
 
 Therefore, since $\Gamma^{-1}(s)$ is an entire function with zeros at the non-positive integers then by Hadamard's factorisation theorem,
 
